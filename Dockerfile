@@ -9,7 +9,7 @@ WORKDIR /spire
 RUN make build
 
 # Common base
-FROM alpine AS spire-base
+FROM alpine:3.20.3 AS spire-base
 RUN apk --no-cache add dumb-init
 RUN apk --no-cache add ca-certificates
 RUN mkdir -p /opt/spire/bin
